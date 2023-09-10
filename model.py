@@ -41,7 +41,7 @@ def edit_note():
     edit_name = input(text_fields.note_name)
     for note in notes:
         if note['Заголовок'] == edit_name:
-            note['Заголовок'] = input('Введите новый заголовок: ')
+            note['Заголовок'] = input(text_fields.new_name)
             note['Текст'] = input(text_fields.edit_text)
             note['Дата'] = datetime.now().strftime('%d.%m.%y / %H:%M')
             with open('notes.json', 'w') as file:
