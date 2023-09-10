@@ -48,9 +48,9 @@ def edit_note():
     return (print(text_fields.wrong_del))
 
 def clear_notes():
-    clear_list = []
+    note_list = []
     with open('notes.json', 'w') as file:
-        json.dump(clear_list, file)
+        json.dump(note_list, file)
     print(text_fields.text_clear)
 
 
