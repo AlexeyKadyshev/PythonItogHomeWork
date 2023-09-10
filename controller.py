@@ -15,3 +15,5 @@ def start():
                 model.del_notes()
             case 5:
                 model.clear_notes()
+            case 6:
+                break
