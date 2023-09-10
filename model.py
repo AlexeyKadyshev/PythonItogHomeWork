@@ -32,7 +32,7 @@ def del_notes():
             with open('notes.json', 'w') as file:
                 json.dump(notes, file)
             return(print(text_fields.note_del))
-    return(print(text_fields.wrong_del))
+    return(print(text_fields.wrong_name))
 
 
 def edit_note():
@@ -47,7 +47,7 @@ def edit_note():
             with open('notes.json', 'w') as file:
                 json.dump(notes, file)
             return (print(text_fields.save_text))
-    return (print(text_fields.wrong_del))
+    return (print(text_fields.wrong_name))
 
 def clear_notes():
     note_list = []
