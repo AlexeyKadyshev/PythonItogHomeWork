@@ -38,9 +38,10 @@ def del_notes():
 def edit_note():
     with open('notes.json') as file:
         notes = json.load(file)
-    del_name = input(text_fields.note_name)
+    edit_name = input(text_fields.note_name)
     for note in notes:
-        if note['Заголовок'] == del_name:
+        if note['Заголовок'] == edit_name:
+            note['Заголовок'] = input('Введите новый заголовок: ')
             note['Текст'] = input(text_fields.edit_text)
             note['Дата'] = datetime.now().strftime('%d.%m.%y / %H:%M')
             with open('notes.json', 'w') as file:
