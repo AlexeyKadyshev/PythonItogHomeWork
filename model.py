@@ -42,6 +42,7 @@ def edit_note():
     for note in notes:
         if note['Заголовок'] == del_name:
             note['Текст'] = input(text_fields.edit_text)
+            note['Дата'] = datetime.now().strftime('%d.%m.%y / %H:%M')
             with open('notes.json', 'w') as file:
                 json.dump(notes, file)
             return (print(text_fields.save_text))
